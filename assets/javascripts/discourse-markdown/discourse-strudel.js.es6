@@ -12,8 +12,8 @@ export function setup(helper) {
 
       replace: function(state, tagInfo, content) {
         const token = state.push("html_raw", '', 0);
-        const escaped = state.md.utils.escapeHtml(content);
-        token.content = `<strudel-repl>\n${escaped}\n</strudel-repl>\n`;
+        //const escaped = state.md.utils.escapeHtml(content);
+        token.content = `<strudel-repl>\n<!-- ${content} -->\n</strudel-repl>\n`;
         return true;
       }
     });
